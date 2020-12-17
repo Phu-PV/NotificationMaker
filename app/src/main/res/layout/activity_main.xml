@@ -5,10 +5,31 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/show_notification"
+        android:id="@+id/show_head_up_notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Show Notification" />
+        android:text="Show Head Up Notification" />
+
+    <Button
+        android:id="@+id/show_default_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Show Default Notification" />
+
+    <Button
+        android:id="@+id/show_silent_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Show Silent Notification" />
+
+    <Button
+        android:id="@+id/show_minimize_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Show Minimize Notification" />
 
 </LinearLayout>

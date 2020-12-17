@@ -11,8 +11,6 @@ const val MIN_IMPORTANCE_CHANNEL = "min_importance_channel"
 const val NONE_IMPORTANCE_CHANNEL = "none_importance_channel"
 
 fun createNotificationChannels(context: Context) {
-    val notificationManager =
-        context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
     val channelList = listOf(
         NotificationChannel(
             HIGH_IMPORTANCE_CHANNEL,
@@ -40,5 +38,7 @@ fun createNotificationChannels(context: Context) {
             NotificationManager.IMPORTANCE_NONE
         )
     )
-    notificationManager.createNotificationChannels(channelList)
+    (context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager).run {
+        createNotificationChannels(channelList)
+    }
 }
